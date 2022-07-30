@@ -1,0 +1,3 @@
+.singleArticlePageWrapper {
+  @apply container mx-auto pt-5 max-w-[760px];
+}

@@ -1,0 +1,9 @@
+.articleWrapper {
+  @apply border rounded-md py-4 px-6 mb-2 hover:shadow hover:transition-all cursor-pointer;
+}
+img {
+  @apply mb-5;
+}
+div {
+  @apply mb-3;
+}
