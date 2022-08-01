@@ -13,9 +13,10 @@ const fetchArticles = (page = 1, pageSize = 30) => {
       dispatch(articlesSlice.actions.fetching);
       const AuthStr = "54ee2db275f04982a44c3132ae0f904e";
       const keywords = "bitcoin";
-      const url = `everything?q=${keywords}&apiKey=${AuthStr}`;
+      const url = `everything`;
+      // const url = `everything?q=${keywords}&apiKey=${AuthStr}`;
       const response = await axios.get<ServerResponse<IArticle>>(url, {
-        params: { page, pageSize },
+        params: { q: {}, language: "en", apiKey: AuthStr, page, pageSize },
       });
       dispatch(
         articlesSlice.actions.fetchSuccess({
